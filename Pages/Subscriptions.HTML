@@ -1,35 +1,104 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscriptions</title>
+    <title>Subscriptions | SharkGYM</title>
     <link rel="stylesheet" href="../CSS/shared.css">
     <link rel="stylesheet" href="../CSS/Subscriptions.css">
 </head>
 <body>
     <header>
         <nav aria-label="Main navigation">
-            <a href="index.html" class="logo">
-                Shark<span>GYM</span>
-            </a>
-            
-            <input type="checkbox" id="menu-toggle">
+            <a href="Index.HTML" class="logo">Shark<span>GYM</span></a>
 
-            <label for="menu-toggle" class="menu-icon">
-                ☰
-            </label>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
 
             <ul>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="subscriptions.HTML">Subscription</a></li>
+                <li><a href="Index.HTML">Home</a></li>
+                <li><a href="Programs.HTML">Programs</a></li>
+                <li><a href="Trainers.HTML">Trainers</a></li>
+                <li><a href="Subscriptions.HTML" aria-current="page">Subscriptions</a></li>
                 <li><a href="Contacts.HTML">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <p>Checking</p>
+    <main class="subscriptions-page">
+        <section class="subscriptions-hero">
+            <p class="subscription-eyebrow">YOUR FITNESS JOURNEY STARTS HERE</p>
+            <h1>Choose Your Membership</h1>
+            <p>Find the right plan for your goals, your lifestyle and your budget.</p>
+            <a class="subscription-cta" href="#plans">Explore Plans</a>
+        </section>
+
+        <section class="subscription-plans" id="plans">
+            <div class="subscription-intro">
+                <p class="subscription-eyebrow">SIMPLE. FLEXIBLE. EFFECTIVE.</p>
+                <h2>Membership Plans</h2>
+                <p>Choose your plan and take the next step towards a stronger you.</p>
+            </div>
+
+            <div class="subscription-cards">
+                <article class="subscription-card">
+                    <h3>Basic</h3>
+                    <p class="subscription-description">Everything you need to get started.</p>
+                    <p class="subscription-price">€19 <span>/ month</span></p>
+
+                    <ul>
+                        <li>Gym floor access</li>
+                        <li>Strength equipment</li>
+                        <li>Cardio equipment</li>
+                        <li>Changing room access</li>
+                    </ul>
+
+                    <a href="Contacts.HTML" class="subscription-button">Choose Basic</a>
+                </article>
+
+                <article class="subscription-card subscription-featured">
+                    <p class="subscription-popular">MOST POPULAR</p>
+                    <h3>Plus</h3>
+                    <p class="subscription-description">More variety for your workouts.</p>
+                    <p class="subscription-price">€29 <span>/ month</span></p>
+
+                    <ul>
+                        <li>Everything in Basic</li>
+                        <li>Group fitness classes</li>
+                        <li>Introductory trainer session</li>
+                        <li>More workout options</li>
+                    </ul>
+
+                    <a href="Contacts.HTML" class="subscription-button">Choose Plus</a>
+                </article>
+
+                <article class="subscription-card">
+                    <h3>Elite</h3>
+                    <p class="subscription-description">Extra support for your goals.</p>
+                    <p class="subscription-price">€49 <span>/ month</span></p>
+
+                    <ul>
+                        <li>Everything in Plus</li>
+                        <li>Monthly coaching session</li>
+                        <li>Progress check-in</li>
+                        <li>Individual training guidance</li>
+                    </ul>
+
+                    <a href="Contacts.HTML" class="subscription-button">Choose Elite</a>
+                </article>
+            </div>
+
+            <p class="subscription-note">
+                Prices and benefits are illustrative examples for this student project.
+            </p>
+        </section>
+
+        <section class="subscription-bottom">
+            <h2>Need help choosing?</h2>
+            <p>Meet our trainers and find the support you need to reach your fitness goals.</p>
+            <a href="Trainers.HTML" class="subscription-cta">Meet Our Trainers</a>
+        </section>
     </main>
 
     <footer>
