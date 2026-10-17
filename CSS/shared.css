@@ -1,4 +1,4 @@
-
+/* Shared design tokens, typography, navigation, footer and reusable sections. */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300&display=swap');
 
 :root {
@@ -15,7 +15,6 @@
     --font-body: 18px;
 }
 
-/* General */
 body {
     font-family: var(--font-family);
     min-height: 100vh;
@@ -24,8 +23,10 @@ body {
     margin: 0;
 }
 
-/* Header & Navigation */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: var(--color-dark);
 }
 
@@ -54,7 +55,6 @@ header nav a {
     text-decoration: none;
 }
 
-/* Logo */
 header nav a.logo {
     font-size: var(--font-logo);
     font-weight: 800;
@@ -72,47 +72,53 @@ header nav a.logo span {
     display: none;
 }
 
-/* Main Content */
 main {
     flex: 1;
 }
 
-/* Hero */
-.hero h1 {
-    font-size: var(--font-hero);
-    font-weight: 800;
-    color: var(--color-white);
-}
-
-.hero p {
-    font-size: var(--font-body);
-    color: var(--color-secondary);
-}
-
 .hero {
+    background-color: var(--color-dark);
+    padding: 80px 30px;
+}
+
+.hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 50px;
 
-    background-color: var(--color-dark);
-    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.hero > div {
+.hero-content {
     flex: 1;
-}
-
-.hero img {
-    flex: 1;
-    width: 45%;
     min-width: 0;
-    max-width: 500px;
-    height: auto;
-    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--color-white);
+    margin: 0 0 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--color-secondary);
+    margin: 0 0 20px;
 }
 
 .hero a {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+section a {
     display: inline-block;
     padding: 12px 30px;
     background-color: var(--color-primary);
@@ -121,22 +127,38 @@ main {
     border-radius: 8px;
 }
 
-/* Information Section */
-.information h2 {
-    font-size: var(--font-section-title);
-    font-weight: 800;
-    color: var(--color-dark);
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 35px 60px;
+    border-radius: 8px;
 }
 
-/* Quote Section */
-.quote p {
-    font-size: 36px;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--color-dark);
+.cta h2 {
+    margin: 0 0 8px;
 }
 
-/* Footer */
+.cta p {
+    margin: 0;
+}
+
+.cta a {
+    color: var(--color-white);
+    text-decoration: none;
+    border: 2px solid var(--color-white);
+    border-radius: 8px;
+    padding: 10px 30px;
+    white-space: nowrap;
+}
+
 footer {
     background-color: var(--color-dark);
     color: var(--color-white);
@@ -148,9 +170,27 @@ footer p {
     margin: 0;
 }
 
-/* Mobile */
-@media (max-width: 375px) {
-        header nav {
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        width: 100%;
+        flex: none;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    header nav {
         flex-wrap: wrap;
     }
 
@@ -161,46 +201,92 @@ footer p {
     }
 
     header nav ul {
-        padding: 10px ;
         display: none;
         flex-direction: column;
         width: 100%;
+        padding: 10px 0;
     }
 
     #menu-toggle:checked ~ ul {
         display: flex;
     }
 
-    section.hero{
-        padding: 0px 20px;
-    }
-    h1{
-        margin-top: 5px;
-    }
-
-    .hero img {
-    width: 100%;
-    max-width: 650px;
-    height: auto;
-    object-fit: cover;
-}
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-        .hero {
+    .cta {
         flex-direction: column;
+        align-items: flex-start;
+        margin: 40px 20px;
+        padding: 25px;
     }
 
-    nav {
-        padding: 10px;
+    .cta a {
+        align-self: center;
+    }
+}
+
+/* Common content-page styles and keyboard navigation. */
+body.content-page {
+    color: var(--color-dark);
+    background-color: var(--color-white);
+}
+
+.content-page main {
+    font-size: var(--font-body);
+    line-height: 1.6;
+}
+
+header a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+.content-page .hero-content p {
+    max-width: 760px;
+    margin-bottom: 0;
+}
+
+.content-page .hero h1 {
+    line-height: 1.15;
+}
+
+.content-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 30px;
+}
+
+.content-section h2 {
+    font-size: var(--font-section-title);
+    line-height: 1.2;
+    font-weight: 800;
+    margin: 0 0 30px;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+    }
+
+    #menu-toggle:focus-visible + .menu-icon {
+        outline: 3px solid var(--color-primary);
+        outline-offset: 4px;
     }
 }
 
 
 /* =========================
    Trainers Page
-========================= */
 
 .trainer-section {
     padding: 64px 24px;
@@ -399,7 +485,6 @@ footer p {
 /* =====================================
    SHARKGYM THEME: SUBSCRIPTIONS
    Navy + Blue + White
-===================================== */
 
 .subscriptions-hero {
     display: flex;
@@ -610,7 +695,6 @@ footer p {
 
 /* =====================================
    TRAINERS PAGE BOTTOM SECTION
-===================================== */
 
 .membership-cta {
     display: flex;
@@ -736,7 +820,6 @@ footer p {
 
 /* =========================
    TRAINERS FOOTER SECTION
-========================= */
 
 .trainer-section .content-note {
     margin: 20px auto 0;
@@ -891,5 +974,14 @@ footer p {
 
     .subscriptions-hero > p:not(.subscription-eyebrow) {
         font-size: 16px;
+
+    .menu-icon {
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .content-section {
+        margin: 40px auto;
+        padding: 0 20px;
     }
 }
