@@ -59,6 +59,13 @@
     border-radius: 10px;
 }
 
+@media (min-width: 376px) and (max-width: 768px) {
+    .pictures figure {
+        flex: 1 1 220px;
+        min-width: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .hero picture {
         width: 100%;

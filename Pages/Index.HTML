@@ -13,19 +13,14 @@
 <body>
     <header>
         <nav aria-label="Main navigation">
-            <a href="index.html" class="logo">
-                Shark<span>GYM</span>
-            </a>
-
-            <input type="checkbox" id="menu-toggle">
-
-            <label for="menu-toggle" class="menu-icon">
-                ☰
-            </label>
-
-            <ul>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="subscriptions.HTML">Subscription</a></li>
+            <a href="Index.HTML" class="logo">Shark<span>GYM</span></a>
+            <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" aria-controls="main-menu">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul id="main-menu">
+                <li><a href="Index.HTML" aria-current="page">Home</a></li>
+                <li><a href="Programs.HTML">Programs</a></li>
+                <li><a href="Trainers.html">Trainers</a></li>
+                <li><a href="Subscriptions.HTML">Subscriptions</a></li>
                 <li><a href="Contacts.HTML">Contacts</a></li>
             </ul>
         </nav>
