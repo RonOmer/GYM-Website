@@ -3,36 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs</title>
+    <title>SharkGYM - Programs</title>
     <link rel="stylesheet" href="../CSS/shared.css">
+    <link rel="stylesheet" href="../CSS/Programs.css">
 </head>
-<body>
-    <header>
-        <nav aria-label="Main navigation">
-            <a href="index.html" class="logo">
-                Shark<span>GYM</span>
-            </a>
-            
-            <input type="checkbox" id="menu-toggle">
-
-            <label for="menu-toggle" class="menu-icon">
-                ☰
-            </label>
-            
-            <ul>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="subscriptions.HTML">Subscription</a></li>
-                <li><a href="Contacts.HTML">Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <p>Checking</p>
-    </main>
-
-    <footer>
-        <p>© 2026 SharkGYM. All rights reserved.</p>
-    </footer>
+<body class="content-page">
+<header>
+    <nav aria-label="Main navigation">
+        <a href="Index.HTML" class="logo">Shark<span>GYM</span></a>
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu" aria-controls="main-menu">
+        <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation menu">&#9776;</label>
+        <ul id="main-menu">
+            <li><a href="Programs.HTML" aria-current="page">Programs</a></li>
+            <li><a href="Subscriptions.HTML">Subscription</a></li>
+            <li><a href="Contacts.HTML" >Contacts</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="hero" aria-labelledby="programs-title">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 id="programs-title">Find Your Perfect Workout</h1>
+                <p>From your first session to your next personal best, SharkGYM has a program to help you move forward. Find the training that fits your goals and enjoy every step of your fitness journey.</p>
+            </div>
+        </div>
+    </section>
+    <section class="content-section" aria-labelledby="training-title">
+        <h2 id="training-title">Training for Every Goal</h2>
+        <div class="program-list">
+            <article class="program-card">
+                <figure>
+                    <img src="../Images/pic7.jpeg" srcset="../Images/pic8.jpeg 2500w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 257px"
+                        alt="Dumbbells and weight benches in the gym" loading="lazy">
+                    <figcaption>
+                        <h3>Strength Training</h3>
+                        <p>Build muscle and increase your strength. Develop a solid foundation with free weights and resistance exercises at your own pace.</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="program-card">
+                <figure>
+                    <img src="../Images/pic5.jpeg" srcset="../Images/pic5.jpeg 2048w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 257px"
+                        alt="Participants keeping active in an exercise class" loading="lazy">
+                    <figcaption>
+                        <h3>Cardio &amp; Endurance</h3>
+                        <p>Improve cardiovascular fitness and stamina. Keep moving with energizing workouts that help you go further and feel stronger.</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="program-card">
+                <figure>
+                    <img src="../Images/pic9.png" srcset="../Images/pic9.png 940w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 257px"
+                        alt="Trainer guiding an athlete through a supported lunge" loading="lazy">
+                    <figcaption>
+                        <h3>Functional Training</h3>
+                        <p>Improve mobility, balance, and everyday performance. Practice controlled movements that build confidence in and out of the gym.</p>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="program-card">
+                <figure>
+                    <img src="../Images/pic6.jpeg" srcset="../Images/pic6.jpeg 2048w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 257px"
+                        alt="Four smiling members of a gym community" loading="lazy">
+                    <figcaption>
+                        <h3>Group Fitness Classes</h3>
+                        <p>Stay motivated while training with others. Share the energy of a supportive community and make movement part of your routine.</p>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+    </section>
+    <section class="cta" aria-labelledby="join-title">
+        <div>
+            <h2 id="join-title">Your Next Chapter Starts Here</h2>
+            <p>Find a membership that fits your goals and start training with SharkGYM.</p>
+        </div>
+        <a href="Subscriptions.HTML">Explore Subscriptions</a>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2026 SharkGYM. All rights reserved.</p>
+</footer>
 </body>
 </html>
