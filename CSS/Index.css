@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-.quote p {
+.quote blockquote p {
     font-size: 36px;
     font-weight: 300;
     font-style: italic;
@@ -26,12 +26,23 @@
 }
 
 .quote {
-    text-align: center;
+    margin: 0;
+    background-color: var(--color-secondary);
     padding: 50px 20px;
 }
 
 .quote blockquote {
-    margin: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quote figcaption {
+    max-width: 800px;
+    margin: 16px auto 0;
+    color: var(--color-dark);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: right;
 }
 
 .pictures {
@@ -76,5 +87,11 @@
         width: 100%;
         height: auto;
         max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .quote blockquote p {
+        font-size: 28px;
     }
 }

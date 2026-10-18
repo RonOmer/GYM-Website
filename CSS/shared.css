@@ -23,14 +23,14 @@ body {
     margin: 0;
 }
 
-header {
+body > header {
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: var(--color-dark);
 }
 
-header nav {
+body > header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +39,7 @@ header nav {
     padding: 20px 30px;
 }
 
-header nav ul {
+body > header nav ul {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -48,14 +48,14 @@ header nav ul {
     padding: 0;
 }
 
-header nav a {
+body > header nav a {
     font-size: 18px;
     font-weight: 400;
     color: var(--color-secondary);
     text-decoration: none;
 }
 
-header nav a.logo {
+body > header nav a.logo {
     font-size: var(--font-logo);
     font-weight: 800;
     color: var(--color-white);
@@ -63,7 +63,7 @@ header nav a.logo {
     flex-shrink: 0;
 }
 
-header nav a.logo span {
+body > header nav a.logo span {
     color: var(--color-primary);
 }
 
@@ -190,7 +190,7 @@ footer p {
         font-size: 36px;
     }
 
-    header nav {
+    body > header nav {
         flex-wrap: wrap;
     }
 
@@ -200,7 +200,7 @@ footer p {
         color: white;
     }
 
-    header nav ul {
+    body > header nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -234,16 +234,21 @@ body.content-page {
     line-height: 1.6;
 }
 
-header a[aria-current="page"] {
+body > header a[aria-current="page"] {
     text-decoration: underline;
     text-underline-offset: 6px;
 }
 
 a:focus-visible,
 input:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+button:focus-visible {
     outline: 3px solid var(--color-primary);
     outline-offset: 4px;
+}
+
+.content-page .hero-container.hero-content {
+    display: block;
 }
 
 .content-page .hero-content p {
