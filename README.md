@@ -24,7 +24,7 @@ No JavaScript, build tools, or package installation is required.
 
 ```text
 GYM-website/
-├── Index.HTML
+├── index.html
 ├── Pages/
 │   ├── Programs.HTML
 │   ├── Trainers.html
@@ -43,13 +43,13 @@ GYM-website/
 
 ## Run locally
 
-Open `Index.HTML` in a browser. Alternatively, from the project root, run the following command if Python is installed:
+Open `index.html` in a browser. Alternatively, from the project root, run the following command if Python is installed:
 
 ```sh
 python -m http.server 8000
 ```
 
-Then visit `http://localhost:8000/Index.HTML`. Use the explicit filename because its capitalization may prevent a server from treating it as the default index page. Preserve filename capitalization when hosting on a case-sensitive server.
+Then visit `http://localhost:8000/index.html`. The server also serves index.html as the default page at http://localhost:8000/.
 
 The navigation collapses into a menu on smaller screens. Check both desktop and mobile layouts when editing styles.
 
